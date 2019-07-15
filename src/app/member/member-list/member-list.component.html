@@ -1,0 +1,19 @@
+<mat-nav-list>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <!--<p><img src="http://traktor.estudiosdwi.com/src/assets/imgs/bgfuel.png" style="max-width:100%!important;height:auto"/></p>-->
+      <p><img src="../../../assets/img/bgfuel.png" style="max-width:100%!important;height:auto"/></p>
+  <mat-list-item *ngFor="let member of members">
+    <a matLine [routerLink]="['/members',member.id]" routerLinkActive="router-link-active" >{{member.nombre}}</a>
+    <!-- No podemos eliminar los dos miembros fundadores -->
+    <button *ngIf="member.id > 3" mat-icon-button (click)="deleteMember(member.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+  <button mat-raised-button color="custom" [routerLink]="['/addMember']"><mat-icon>add</mat-icon>AÑADIR COACH</button>
+</div>
+
+</mat-nav-list>
+
+
+

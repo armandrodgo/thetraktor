@@ -1,0 +1,33 @@
+<mat-toolbar class="custom" color="custom">
+  <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="start">
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+<li>
+      <a routerLink="/home" routerLinkActive="mat-accent">Inicio</a>
+</li>
+  <li>
+      <a routerLink="/members" routerLinkActive="mat-accent">Coaches</a>
+  </li>
+  <li>
+    <a routerLink="/sessions" routerLinkActive="mat-accent">Sesiones</a>
+  </li>
+      </ul>
+      </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <li *ngIf="!isLogged">
+              <a routerLink="users/login" routerLinkActive="mat-accent">Login</a>
+          </li>
+          <li *ngIf="!isLogged">
+              <a routerLink="users/register" routerLinkActive="mat-accent">Registro</a>
+          </li>
+          <li *ngIf="isLogged">
+              <a routerLink="home" (click)="onLogout()">Logout</a>
+          </li>
+      </ul>
+  </div>
+</mat-toolbar>

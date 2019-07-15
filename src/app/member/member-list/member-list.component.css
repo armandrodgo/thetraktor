@@ -1,0 +1,22 @@
+/* main{background: url('http://traktor.estudiosdwi.com/src/assets/imgs/bgroad.png'); */
+ /* main{background: url('../../../assets/img/bgroad.png'); */
+    main{background-color:black;
+  background-size: cover;color: rgba(231,177,55,1)!important;}
+
+.mat-nav-list{
+  margin-bottom: 30px;
+}
+.mat-list-item{
+  margin-bottom: 30px; max-width:80%;
+}
+
+.mat-line, .mat-nav-list a, .mat-list-item,
+.mat-list-base .mat-list-item,
+.mat-list-base .mat-list-item .mat-line {color: rgba(231,177,55,1)!important; }
+
+mat-list-item{
+  -webkit-box-shadow: 2px 5px 5px 0px rgba(231,177,55,0.75);
+  -moz-box-shadow: 2px 5px 5px 0px rgba(231,177,55,0.75);
+  box-shadow: 2px 5px 5px 0px rgba(231,177,55,0.75); }
+
+.mat-card{background-color: transparent!important;color:darkgoldenrod;}

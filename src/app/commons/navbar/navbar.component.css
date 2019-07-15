@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active{
+  color: lightgray;
+}
+
+.navigation-items{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+mat-toolbar{
+  border-radius: 3px;
+  background-color: rgba (249,214,26,1);
+}
+
+.mat-toolbar.mat-custom {
+  background-color: rgba(249,214,26,1)!important;
+  color: black!important;
+}
+.mat-toolbar.mat-custom a{
+  color: black!important;
+}
+.mat-toolbar.mat-custom a:hover,.mat-toolbar a.mat-accent {
+  color: white!important;
+}
+
+@media(max-width: 959px){
+  mat-toolbar{
+      border-radius: 0px;
+  }
+}

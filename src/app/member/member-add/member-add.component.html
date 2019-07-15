@@ -1,0 +1,61 @@
+<div class="fluid-container">
+  <form mat-form fxLayout="column" fxLayoutAlign="center strecth" fxLayoutGap="15px">
+    <!-- <mat-form-field> -->
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]=userData.nombre name="nombre" placeholder="Nombre">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Género</mat-label>
+      <input matInput  [(ngModel)]=userData.genero name="genero" placeholder="H|M">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Activo</mat-label>
+      <input matInput  [(ngModel)]=userData.activo name="activo" placeholder="S|N">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Email</mat-label>
+      <input matInput  [(ngModel)]=userData.email name="email" placeholder="Mail">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Dirección</mat-label>
+      <input matInput  [(ngModel)]=userData.direccion name="direccion"
+        placeholder="Dirección">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Población</mat-label>
+      <input matInput [(ngModel)]=userData.poblacion name="poblacion"
+        placeholder="Población">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
+      <mat-label>Teléfono</mat-label>
+      <input matInput [(ngModel)]=userData.telefono name="telefono" placeholder="Teléfono">
+      <!-- <mat-hint>Hint</mat-hint> -->
+          <mat-divider></mat-divider>
+    <!-- </mat-form-field> -->
+     <!-- <mat-form-field> -->
+        <mat-label>Descripción - Titulación</mat-label>
+        <textarea matInput [(ngModel)]=userData.description name="description"
+        placeholder="Descripción - Titulaciones">
+          </textarea>
+
+        <!-- <mat-hint>Hint</mat-hint> -->
+            <mat-divider></mat-divider>
+      <!-- </mat-form-field> -->
+    <mat-divider></mat-divider>
+    <mat-form-field><button mat-button (click)="addMember()">
+        <mat-icon>save</mat-icon>Enviar</button></mat-form-field>
+  </form>
+
+</div>

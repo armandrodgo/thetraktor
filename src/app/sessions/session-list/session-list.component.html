@@ -1,0 +1,18 @@
+<mat-nav-list>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center" fxLayoutGap="15px">
+      <!--<p><img src="http://traktor.estudiosdwi.com/src/assets/imgs/bgfuel.png" style="max-width:100%!important;height:auto"/></p>-->
+      <p><img src="../../../assets/img/bgfuel.png" style="max-width:100%!important;height:auto"/></p>
+  <mat-list-item *ngFor="let sess of sessions">
+    <a matLine [routerLink]="['/session',sess.id]">{{sess.id}}  > {{sess.title}} - <strong>Hardlevel:<i>{{sess.hardlevel}}</i></strong>  </a>
+
+    <!--<button mat-icon-button (click)="deleteSession(sess.id)">
+      <mat-icon>delete</mat-icon>
+    </button>-->
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</div>
+</mat-nav-list>
+
+<!-- PROXIMAMENTE - Si Admin
+<button mat-raised-button [routerLink]="['/addSession']">Añadir Sesion</button>
+-->

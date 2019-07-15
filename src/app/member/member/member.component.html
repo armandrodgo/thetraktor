@@ -1,0 +1,28 @@
+<div class="fluid-container" style="text-align:center">
+    <!--<p><img src="http://traktor.estudiosdwi.com/src/assets/imgs/logo_thetraktor.png" style="max-width:100%!important;height:auto"/></p>-->
+    <p><img src="../../../assets/img/logo_thetraktor.png" style="max-width:100%!important;height:auto"/></p>
+  <h1>THE TRAKTOR TEAM</h1>
+  <h2>{{member.nombre}}</h2>
+
+  <!--<p><img src="http://traktor.estudiosdwi.com/src/assets/imgs/{{member.avatar}}" style="max-width:100%!important;height:auto"/></p>-->
+  <p><img src="../../../assets/img/{{member.avatar}}" style="max-width:100%!important;height:auto"/></p>
+  <mat-card class="row">
+      <mat-grid-list cols="6" rowHeight="300px">
+          <mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]=""> </mat-grid-tile>
+          <mat-grid-tile [colspan]="4" [rowspan]="1" [style.background]="" ng-controller="">
+              <p class="descripstyle" style="white-space: pre-wrap;">{{member.description}}</p>
+          </mat-grid-tile>
+          <mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]=""> </mat-grid-tile>
+        </mat-grid-list>
+
+    <!--
+      <div class="module col-sm-12">
+      <div class="module col-sm-3">&nbsp;</div>
+      <div class="module  col-sm-6">
+        <p>{{member.description}}</p>
+      </div>
+      <div class="module col-sm-3">&nbsp;</div>
+      {{member |json}}
+    </div>-->
+  </mat-card>
+</div>
