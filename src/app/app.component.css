@@ -16,9 +16,8 @@ img{
   height: auto;
 }
 
-/* main{background: url('http://traktor.estudiosdwi.com/src/assets/imgs/bgroad.png'); */
- /* main{background: url('../assets/img/bgroad.png'); */
-  main{background-color:black; background-size: cover;color: rgba(231,177,55,1)!important;min-height: 100%;}
+main{background: url('../../src/assets/img/bgroad.jpg');
+  background-size: cover;color: rgba(231,177,55,1)!important;min-height: 100%;}
 
 
 

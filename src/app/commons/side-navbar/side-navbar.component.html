@@ -10,7 +10,7 @@
     </a>
     <!--<a mat-list-item routerLink="/addMember" (click)="onSidenavClose()">
         <mat-icon>account_balance</mat-icon><span class="nav-caption">Añadir Coach</span>
-    </a>->
+    </a>-->
     <a *ngIf="!isLogged" mat-list-item routerLink="/users/login" routerLinkActive="mat-accent">
       <mat-icon>face</mat-icon><span class="nav-caption">Login</span>
     </a>
@@ -22,5 +22,5 @@
     <a *ngIf="isLogged" mat-list-item routerLink="/home" (click)="onLogout()">
      <mat-icon>exit_to_app</mat-icon><span class="nav-caption">Logout</span>
     </a>
-  -->
+
 </mat-nav-list>

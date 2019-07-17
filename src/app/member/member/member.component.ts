@@ -9,7 +9,7 @@ import { Member } from 'src/app/shared/classes/member';
   styleUrls: ['./member.component.css']
 })
 export class MemberComponent implements OnInit {
-  public member: Member;
+  public member = new Member();
   public identifier: any;
 
   constructor(private apiService: ApiService, private route: ActivatedRoute, private routes: Router) {

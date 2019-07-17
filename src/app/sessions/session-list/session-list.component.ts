@@ -14,11 +14,15 @@ export class SessionListComponent implements OnInit {
   sessions$: Observable<any>;
   sessions;
   data: any;
+
   constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
     this.getSessions();
+    /*this.routeOut.navigateByUrl('/RefrshComponent', { skipLocationChange: true }).then(() =>
+     this.routeOut.navigate(['/member-list']));*/
   }
+  
 
   getSessions() {
     this.apiService.getSessions$().subscribe(e => this.sessions = e);

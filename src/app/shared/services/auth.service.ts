@@ -4,12 +4,17 @@ import { HttpHeaders } from '@angular/common/http';
 import { UserInterface } from '../interfaces/user-interface';
 import { map, tap, catchError } from 'rxjs/operators';
 import { Observable, throwError, BehaviorSubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  // tslint:disable-next-line: variable-name
+  private auth_url = environment.API_URL;
+
   isLogged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.getLogged());
 
   constructor(private http: HttpClient) {}
@@ -18,10 +23,13 @@ export class AuthService {
   });
 
   registerUser(name: string, email: string, password: string) {
-    const url_api = 'http://localhost:3000/register';
+
+    /* const url_api = 'http://localhost:3000/register'; */
+    this.auth_url += 'register';
+
     return this.http
       .post<UserInterface>(
-        url_api,
+        this.auth_url,
         {
           name,
           email,
@@ -35,10 +43,13 @@ export class AuthService {
   }
 
   loginuser(email: string, password: string): Observable<any> {
-    const url_api = 'http://localhost:3000/login';
+
+    /* const url_api = 'http://localhost:3000/login'; */
+    this.auth_url += 'login';
+
     return this.http
       .post<UserInterface>(
-        url_api,
+        this.auth_url,
         { email, password },
         { headers: this.headers }
       )
@@ -52,10 +63,13 @@ export class AuthService {
 
 
   registeruser(email: string, password: string): Observable<any> {
-    const url_api = 'http://localhost:3000/register';
+
+    /* const url_api = 'http://localhost:3000/register'; */
+    this.auth_url += 'register';
+
     return this.http
       .post<UserInterface>(
-        url_api,
+        this.auth_url,
         { email, password },
         { headers: this.headers }
       )
